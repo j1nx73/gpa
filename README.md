@@ -1,6 +1,25 @@
 # GPA Tracker 📊
 
-A modern, full-stack web application for tracking and calculating academic performance across semesters. Built with Next.js, Supabase, and TypeScript.
+> A modern web application for students to track academic performance, calculate GPA, and monitor progress across semesters.
+
+## About
+
+GPA Tracker is a full-stack web application built with **Next.js 15**, **Supabase**, and **TypeScript** that helps students manage their academic performance. The app features preset course structures for different academic years, interactive GPA calculation, performance tracking with charts, and secure user authentication.
+
+### Key Features
+- 🎯 **GPA Calculation** with preset course structures
+- 📊 **Performance Tracking** with interactive charts
+- 🏆 **Academic Rankings** and standings
+- 📚 **Grade Management** with visual feedback
+- 🔐 **Secure Authentication** via Supabase
+- 📱 **Responsive Design** for all devices
+- 🌙 **Dark Mode** support
+
+### Tech Stack
+- **Frontend**: Next.js 15, TypeScript, Tailwind CSS, shadcn/ui
+- **Backend**: Supabase (PostgreSQL, Auth, RLS)
+- **Charts**: Recharts
+- **Deployment**: Netlify
 
 ## ✨ Features
 
@@ -239,14 +258,41 @@ The application uses Supabase with the following features:
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+### Netlify (Recommended)
+1. **Prepare for deployment**
+   ```bash
+   # Run the deployment script
+   ./scripts/deploy.sh
+   ```
+
+2. **Connect to Netlify**
+   - Push your code to GitHub
+   - Connect your repository to Netlify
+   - Set environment variables in Netlify dashboard:
+     - `NEXT_PUBLIC_SUPABASE_URL`
+     - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+3. **Deploy**
+   - Netlify will automatically build and deploy your app
+   - The build output is in the `.next` directory
+   - Your app will be available at your Netlify URL
+
+### Build Process
+The application uses Next.js 15 with the following build configuration:
+- **Build Command**: `npm run build`
+- **Publish Directory**: `.next`
+- **Node Version**: 18
+- **Static Pages**: 8/8 generated
+- **Dynamic Routes**: Available for server-side rendering
+- **Bundle Size**: ~294 kB (First Load JS)
+
+### Vercel (Alternative)
 1. Connect your GitHub repository to Vercel
 2. Set environment variables in Vercel dashboard
 3. Deploy automatically on push to main branch
 
 ### Other Platforms
 The application can be deployed to any platform that supports Next.js:
-- Netlify
 - Railway
 - DigitalOcean App Platform
 - AWS Amplify
