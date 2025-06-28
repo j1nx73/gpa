@@ -9,6 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Netlify deployment configuration
+  trailingSlash: false,
 }
 
 export default nextConfig
